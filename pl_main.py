@@ -14,11 +14,11 @@ pygame.display.set_caption("飞机大战")
 # 设置屏幕大小
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), 0, 32)
 # 隐藏光标
-pygame.mouse.set_visible(True)
+pygame.mouse.set_visible(False)
 # 设置背景
 bg = pygame.image.load("image/bg.png")
 # 设置游戏结束的图片
-bg_game_over = pygame.image.load("image/bg_game_over.png")
+bg_game_over = pygame.image.load("image/bg.png")
 # 加载飞机资源图片
 img_plane = pygame.image.load("image/shoot.png")
 img_start = pygame.image.load("image/start.png")
@@ -36,7 +36,7 @@ player_rect.append(pygame.Rect(330, 624, 102, 126))
 player_rect.append(pygame.Rect(330, 498, 102, 126))
 player_rect.append(pygame.Rect(432, 624, 102, 126))
 # 初始化位置
-player_pos = [200, 450]
+player_pos = [180, 450]
 # 生成玩家类
 player = Player(img_plane, player_rect, player_pos)
 # 设置子弹框
@@ -189,7 +189,7 @@ while running:
     # 游戏结束
     if is_game_over:
         font = pygame.font.SysFont("微软雅黑", 48)
-        text = font.render("Score: " + str(score), True, (255, 0, 0))
+        text = font.render("score: " + str(score), True, (255, 0, 0))
         text_rect = text.get_rect()
         text_rect.centerx = screen.get_rect().centerx
         text_rect.centery = screen.get_rect().centery + 70
