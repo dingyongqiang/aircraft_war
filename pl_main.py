@@ -1,7 +1,7 @@
 import pygame, random
 from sys import exit
 from pygame.locals import *
-from pl_model import *
+from plane_sprites import *
 
 # 设置屏幕的宽度
 SCREEN_WIDTH = 450
